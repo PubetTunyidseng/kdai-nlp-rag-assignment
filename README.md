@@ -246,6 +246,25 @@ Example regression (reported for honesty):
 
 ---
 
+## Demo UI: เปรียบเทียบ Baseline vs v2
+
+หน้าเว็บสำหรับให้คนอื่นลองถามแล้วเห็นผลสองระบบข้างกัน (ใช้ index ที่ `run_all.sh` สร้างไว้)
+
+```bash
+pip install gradio
+python ui/app.py            # เปิด http://localhost:7860
+python ui/app.py --share    # ได้ลิงก์สาธารณะชั่วคราวให้เพื่อนในห้องลองได้
+```
+
+| แท็บ | แสดงอะไร |
+|---|---|
+| เปรียบเทียบ | ถามคำถามเดียว เห็น top-5 chunk ของ baseline และ v2 ข้างกัน พร้อม**อันดับของแต่ละ chunk ใน BM25 / Dense / RRF** และแจ้งเตือนเมื่อ BM25 ของ baseline ไม่เจออะไรเลย ติ๊กเพิ่มเพื่อให้ Qwen สร้างคำตอบของทั้งสองระบบ |
+| ตัดคำ | พิมพ์ข้อความไทย ดู token จาก `standard` เทียบ `thai` analyzer |
+| ผลการทดลอง | ตาราง ablation, กราฟ, และอันดับของ gold chunk ทุกคำถามในแต่ละ config |
+| สถานะระบบ | จำนวน chunk ในแต่ละ index |
+
+---
+
 ## ข้อจำกัด
 
 - **Synthetic test set** ถูกสร้างจาก chunk โดยตรง คำถามแบบ exact จึงเอื้อต่อ lexical matching เกินจริง และคำถามแต่ละข้ออาจมีคำตอบอยู่ในมากกว่า 1 chunk (เช่น "อาการ" อยู่ทั้งในหัวข้อภาพรวมและหัวข้ออาการ) metric จึงประเมินต่ำกว่าจริง แต่ต่ำเท่ากันทุก config
@@ -290,6 +309,8 @@ improved/
   ingest_v2.py            doc-aware context + thai BM25        ข้อ (2)
   rag_v2.py               hybrid search + reranker + generate  ข้อ (2)
   ask_v2.py               ตอบคำถาม 5 ข้อของอาจารย์ด้วย v2
+ui/
+  app.py                  Demo UI เปรียบเทียบ baseline vs v2 (Gradio)
 eval/
   make_testset.py         สร้าง test set (exact / paraphrase)
   testset.jsonl           test set ที่ใช้จริง
