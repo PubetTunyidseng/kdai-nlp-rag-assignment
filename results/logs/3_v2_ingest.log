@@ -1,0 +1,16 @@
+W1017 15:37:45.977000 30196 site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded 53 chunks (teacher's MarkdownNodeParser)
+[context:fulldoc] cached=0 to_generate=53
+  generated 10/53
+  generated 20/53
+  generated 30/53
+  generated 40/53
+  generated 50/53
+  generated 53/53
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 56915.83it/s]
+Batches:   0%|          | 0/14 [00:00<?, ?it/s]Batches:   7%|▋         | 1/14 [00:05<01:07,  5.17s/it]Batches:  14%|█▍        | 2/14 [00:06<00:34,  2.91s/it]Batches:  21%|██▏       | 3/14 [00:07<00:22,  2.05s/it]Batches:  29%|██▊       | 4/14 [00:08<00:15,  1.59s/it]Batches:  36%|███▌      | 5/14 [00:09<00:11,  1.30s/it]Batches:  43%|████▎     | 6/14 [00:10<00:09,  1.14s/it]Batches:  50%|█████     | 7/14 [00:10<00:06,  1.06it/s]Batches:  57%|█████▋    | 8/14 [00:10<00:04,  1.28it/s]Batches:  64%|██████▍   | 9/14 [00:11<00:03,  1.45it/s]Batches:  71%|███████▏  | 10/14 [00:11<00:02,  1.65it/s]Batches:  79%|███████▊  | 11/14 [00:12<00:01,  1.93it/s]Batches:  86%|████████▌ | 12/14 [00:12<00:00,  2.31it/s]Batches:  93%|█████████▎| 13/14 [00:12<00:00,  2.93it/s]Batches: 100%|██████████| 14/14 [00:12<00:00,  1.11it/s]
+  indexed 53 docs -> v2-vector-index
+  indexed 53 docs -> v2-bm25-standard
+  indexed 53 docs -> v2-bm25-thai
+Done.
