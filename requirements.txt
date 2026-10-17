@@ -1,0 +1,10 @@
+opensearch-py
+sentence-transformers>=3.0
+torch
+llama-index-core
+openai
+tqdm
+matplotlib
+# teacher's baseline script imports langchain.schema -> needs the old langchain
+langchain==0.0.354
+langchain-community<0.1
